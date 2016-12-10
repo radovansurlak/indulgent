@@ -1,0 +1,94 @@
+$section-height: 60vw;
+$heading-font: 300 3.5vw Raleway, Arial, sans-serif;
+$subheading-font: 1.5vw/140% Amiri, Times, serif;
+$button-font: 500 1.5vw Raleway, Arial, sans-serif;
+$menu-height: 4vw;
+
+* {
+  font-family: Raleway;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+section {
+  background-size: cover;
+  background-repeat: none;
+  height: $section-height;
+  display: flex;
+  align-items: center;
+
+  .text-content {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 50%;
+    height: 50%;
+    padding: 0 5%;
+
+    text-align: left;
+
+    h1 {
+      font: $heading-font;
+      text-transform: capitalize;
+      padding: 1vw 0;
+
+    }
+    h2 {
+      font: $subheading-font;
+      max-width: 70ch;
+      padding-bottom: 1vw;
+    }
+
+    button {
+      color: white;
+      width: 50%;
+      padding: 2%;
+      background-color: rgba(255,255,255,0);
+      border: 2px solid white;
+      font: $button-font;
+      text-decoration: none;
+      cursor: pointer;
+
+      transition: background-color 400ms;
+
+      &:hover {
+          background-color: rgba(255,255,255,0.3);
+      }
+    }
+  }
+}
+
+#intro {
+  padding-top: $menu-height;
+  background-image: url("../images/intro.jpeg");
+}
+
+#menu {
+  position: fixed;
+  font: $button-font;
+  width: 100%;
+  height: $menu-height;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  ul {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    li {
+      line-height: $menu-height;
+      text-transform: uppercase;
+      padding: 0 1vw;
+      list-style: none;
+    }
+  }
+
+  #logo {
+    height: $menu-height;
+  }
+}
